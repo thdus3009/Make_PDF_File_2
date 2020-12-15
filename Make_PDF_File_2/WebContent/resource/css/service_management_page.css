@@ -1,0 +1,275 @@
+@CHARSET "UTF-8";
+
+        .svc-modal{
+            position: fixed;top: 0;left: 0;
+            width:100%;height: 100%;
+            background: rgba(0, 0, 0,.8);
+            z-index: 99;
+            display: none;
+        }
+        
+        /*layout controls*/
+        .svcmgmt-wrap{
+            max-width: 880px;margin: 0 auto;
+            margin-bottom: 20px;
+            border: 1px solid #b7b5b5;
+            border-radius: 3px;
+            background: #fff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+        .svcmgmt-wrap .svcmgmt-header{
+            width: 100%;
+            border-bottom: 1px solid #b7b5b5;
+        }
+        .svcmgmt-wrap .svcmgmt-header h3{
+            font-size: 20px;line-height: 54px;
+            text-indent: 20px;
+        }
+        .svcmgmt-wrap .svcmgmt-con{
+            width:100%;
+            border-bottom: 1px solid #b7b5b5;
+        }
+        .svcmgmt-wrap>div:last-child{border-bottom: none}
+        
+        
+        .svcmgmt-wrap input, .svcmgmt-wrap button, .svcmgmt-wrap a{cursor: pointer}
+        
+        
+        /*이용 중인 서비스*/
+        .svcmgmt-wrap .svc-in-use{
+            width:800px;
+            margin: 30px auto 40px;
+            text-align: center;
+        }
+        .svcmgmt-wrap .svc-in-use tr{
+            border-bottom: 1px solid #b7b5b5;
+        }
+        .svcmgmt-wrap .svc-in-use tr th{
+            line-height: 50px;
+            font-size: 18px;
+            padding: 0 10px
+        }
+        
+        .svcmgmt-wrap .svc-in-use tr th:first-child, .svc-in-use tr th:last-child{
+            font-size: 0px;
+            width:40px;
+        }
+        .svcmgmt-wrap .svc-in-use tr td{
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 0 10px;
+        }
+        .svcmgmt-wrap .svc-in-use tr td:last-child{
+            position: relative
+        }
+        
+        
+        /*해지 팝업*/
+        .svcmgmt-wrap #svc_cancel{
+            position: absolute;top: 10px;left: 0;
+            width:40px;height: 20px;line-height:1;
+            font-size: 14px;font-weight: 300;
+            border: none;
+            background: #674eec;
+            color:#fff;
+            border-radius: 3px;
+        }
+        .svcmgmt-wrap .cancel-popup{
+            position: fixed;top: 50%;left: 50%;
+            transform: translate(-50%,-50%);
+            width:450px;
+            background: #fff;
+            text-align: center;
+            border-radius: 3px;
+            z-index: 100;
+            display: none;
+        }
+        .svcmgmt-wrap .cancel-popup h4{
+            font-size: 20px;line-height: 42px;
+            border-bottom: 1px solid #b7b5b5;
+        }
+        .svcmgmt-wrap .cancel-popup p{
+            font-size: 16px;line-height: 32px;
+            margin: 20px 0 40px;
+        }
+        .svcmgmt-wrap .cancel-popup button{
+            width:100px;line-height: 40px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 3px;
+            transition: all 0.3s ease 0s;
+        }
+        
+        .svcmgmt-wrap #final_cancel{
+            margin-right: 30px;
+            background: none;
+            border: 1px solid #111;
+        }
+        .svcmgmt-wrap #final_cancel:hover{
+            background: #9b3de4;
+            border-color: #9b3de4;
+            color: #fff
+        }
+        
+        .svcmgmt-wrap #close_cancel_popup{
+            background: #111;
+            color: #fff
+        }
+        .svcmgmt-wrap #close_cancel_popup:hover{
+            background: #9b3de4;
+        }
+        
+        
+        .svcmgmt-wrap .svc-btn-box{
+            width: 545px;height: 45px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .svcmgmt-wrap .svc-btn-box .svcmgmt-btn{
+            width:250px;float: left;
+            text-align: center;line-height: 45px;
+            font-size: 18px;
+            font-weight: 300;
+            border: 1px solid #111;
+            border-radius: 3px;
+            margin-right: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+        .svcmgmt-wrap .svc-btn-box .svcmgmt-btn:last-child{margin-right: 0;}
+        
+        .svcmgmt-wrap .svc-btn-box .svcmgmt-btn:hover{
+            background: #111;
+            color:#fff;
+        }
+        
+
+        
+        /*증빙자료요청 팝업*/
+        .svcmgmt-wrap .svcmgmt-popup{
+            position: fixed;top: 50%;left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 100;
+            background: #fff;
+            width:600px;
+            display: none;
+        }
+        
+        .svcmgmt-wrap #close_svcmgmt_popup{
+            position: absolute;top:15px;right: 15px;
+            width:30px;height: 30px;
+            border: 1px solid #b7b5b5;
+            background: none;
+            transition: all 0.3s ease 0s;
+        }
+        .svcmgmt-wrap #close_svcmgmt_popup span{
+            position: absolute;top:12.5px;left: 0;
+            width:100%;height: 3px;display: block;
+            background: #b7b5b5;
+            transition: all 0.3s ease 0s;
+            transform: rotate(45deg);
+            border-radius: 5px;
+        }
+        .svcmgmt-wrap #close_svcmgmt_popup span:nth-child(2){transform: rotate(-45deg)}
+        .svcmgmt-wrap #close_svcmgmt_popup:hover{border: none}
+        .svcmgmt-wrap #close_svcmgmt_popup:hover span{background: #111;}
+        .svcmgmt-wrap .svcmgmt-popup form{margin: 60px 70px;}
+        
+        .svcmgmt-wrap .svcmgmt-popup form fieldset{width: 100%;}
+        .svcmgmt-wrap .svcmgmt-popup form legend{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .svcmgmt-wrap .svcmgmt-popup form legend>input{margin-right: 10px}
+        .svcmgmt-wrap .svcmgmt-popup form label{
+            width:440px;height:45px ; margin-left: 30px;
+            border: 2px solid #111;
+            border-bottom: none;
+            text-align: center;
+            font-size: 18px;line-height:42px;
+        }
+        
+        .svcmgmt-wrap .tax-invoice label:nth-child(6), .svcmgmt-popup form fieldset label:last-child{border-bottom: 2px solid #111}
+        
+        .svcmgmt-wrap .svcmgmt-popup form label span{
+            display: block;float: right;height:43px ;
+            border-left: 2px solid #111;
+        }
+        .svcmgmt-wrap .svcmgmt-popup form label span input{
+            width:290px;border: none;height: 35px;
+            text-align: right;font-size: 16px;
+            font-weight: 300;
+            margin-right: 10px;
+        }
+        
+        .svcmgmt-wrap .tax-invoice label:nth-child(6) span{width:302px;}
+        .svcmgmt-wrap .tax-invoice label:nth-child(6) span button{
+            width:80px;height: 30px;float: right;
+            line-height: 5px;border: none;border-radius: 3px;
+            font-size: 16px;margin-top:6px;margin-right: 10px;
+            background: #111;color: #fff;font-weight: 300
+        }
+        .svcmgmt-wrap .tax-invoice p{
+            font-weight: 300;font-size: 14px;
+            margin:15px 0 30px 40px;
+        }
+        .svcmgmt-wrap .svcmgmt-popup>p{
+            text-align: center;
+            font-size: 16px;font-weight: 300;
+            margin-bottom: 80px;
+        }
+        .svcmgmt-wrap #final_apply{
+            position: absolute;bottom: 20px;left: 50%;
+            transform: translateX(-50%);
+            width: 150px;height: 45px;line-height: 40px;
+            border: 1px solid #111;background: #111;color: #fff;
+            border-radius: 3px;
+            transition: all 0.3s ease 0s;
+        }
+        .svcmgmt-wrap #final_apply:hover{background: #fff;color:#111;}
+        
+
+        .svcmgmt-wrap>div:last-child >p{
+            font-size: 16px; margin: 20px 0 20px 40px;
+        }
+        
+        /*초대장 발송 서비스 이용 내역*/
+        .svcmgmt-wrap .rest-time{
+            position: relative;
+            width:450px;height:42px ; text-align: center;
+            margin-left: 60px;margin-bottom: 50px;
+            background: #fff;
+        }
+        .svcmgmt-wrap .rest-time .rt-txt{
+            position: relative;z-index: 10;
+            width:300px;float: left;
+            border: 1px solid #111;
+            font-size: 18px;line-height: 42px;
+        }
+        .svcmgmt-wrap .rest-time .rt-num{
+            position: relative;z-index: 10;
+            width:150px;line-height: 42px;display: block;
+            float: left;
+            border: 1px solid #111;
+            border-left: none;
+        }
+        .svcmgmt-wrap .rest-time .rt-num span{text-decoration: underline}
+        .svcmgmt-wrap .rest-time .rt-detail{
+            position: absolute;top: 42px;left: 0;
+            background: #fff;
+            width:100%;height: 0px;
+            display: none;
+        }
+        .svcmgmt-wrap .rt-detail .rt-detail-txt{
+            width: 300px;float: left;
+            border: 1px solid #111;line-height: 42px;
+            border-top: none;
+        }
+        .svcmgmt-wrap .rt-detail .rt-detail-num{
+            width: 150px;float: left;
+            border: 1px solid #111;line-height: 42px;
+            border-top: none;border-left: none;
+        }
+        
