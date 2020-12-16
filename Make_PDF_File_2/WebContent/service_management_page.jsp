@@ -59,6 +59,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                
                 <!-- 반복문 돌리기 -->
                     <tr>
                         <td><input type="radio" class="radio_2" name="svc_choice" value="요금제선택"></td>
@@ -80,7 +81,7 @@
                         <td class="price">660,000원</td>
                         <td><button type="button" id="svc_cancel" value="해지하기">해지</button></td>
                     </tr>
-                
+                    
                 </tbody>
             </table><!--svc-in-use end-->
             <div class="cancel-popup">
